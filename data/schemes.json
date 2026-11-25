@@ -1,0 +1,115 @@
+[
+  {
+    "id": "pm_kisan",
+    "name": "PM-KISAN (Pradhan Mantri Kisan Samman Nidhi)",
+    "level": "Central",
+    "routes": [
+      {"label": "family owns cultivable farmland", "requires": ["owns_farmland"]}
+    ],
+    "also_check": "Land must be in the family's name. Excluded: income-tax payers, institutional landholders, serving/retired government employees (except MTS/Group D), registered professionals (doctors, engineers, lawyers, CAs), pensioners with Rs 10,000+/month.",
+    "cash_yearly": 6000,
+    "benefit_note": "Rs 6,000 per year per family, paid as 3 instalments of Rs 2,000 by DBT",
+    "documents": ["Aadhaar card", "Land ownership records (7/12 extract in Maharashtra)", "Aadhaar-linked bank account", "Mobile number for eKYC"],
+    "apply": "pmkisan.gov.in > New Farmer Registration, or nearest Common Service Centre (CSC)",
+    "source": "https://www.myscheme.gov.in/schemes/pm-kisan"
+  },
+  {
+    "id": "pmjay",
+    "name": "Ayushman Bharat PM-JAY",
+    "level": "Central",
+    "routes": [
+      {"label": "senior citizen aged 70+ (any income)", "min_age": 70},
+      {"label": "low-income household (must be on SECC-2011 / state beneficiary list)", "screening_max_income": 250000}
+    ],
+    "also_check": "Under-70 households qualify only if listed in SECC-2011 or the state's beneficiary list. Check the name on beneficiary.nha.gov.in.",
+    "cash_yearly": 0,
+    "benefit_note": "Free hospital treatment up to Rs 5 lakh per family per year (health cover, not cash)",
+    "documents": ["Aadhaar card", "Ration card or PM letter", "Mobile number for eKYC"],
+    "apply": "beneficiary.nha.gov.in or the Ayushman app; or any empanelled hospital's Ayushman Mitra",
+    "source": "https://nha.gov.in/PM-JAY"
+  },
+  {
+    "id": "pmuy",
+    "name": "Pradhan Mantri Ujjwala Yojana (PMUY)",
+    "level": "Central",
+    "routes": [
+      {"label": "adult woman from a poor household without LPG", "genders": ["female"], "min_age": 18, "requires": ["no_lpg_connection"], "screening_max_income": 250000}
+    ],
+    "also_check": "Household must be poor (Deprivation Declaration) and have no LPG connection from any oil company.",
+    "cash_yearly": 2700,
+    "benefit_note": "Deposit-free LPG connection, free first refill and stove; Rs 300 subsidy per 14.2 kg cylinder for up to 9 refills a year (up to Rs 2,700/year)",
+    "documents": ["Aadhaar card of the woman", "Ration card / family proof", "Bank account details", "Passport-size photo", "Deprivation Declaration (form)"],
+    "apply": "pmuy.gov.in or nearest LPG distributor (Indane, Bharat Gas, HP Gas)",
+    "source": "https://www.pmuy.gov.in/faq"
+  },
+  {
+    "id": "pmegp",
+    "name": "PMEGP (Prime Minister's Employment Generation Programme)",
+    "level": "Central",
+    "routes": [
+      {"label": "adult wanting to start a new micro-enterprise", "min_age": 18, "requires": ["wants_to_start_business"]}
+    ],
+    "also_check": "New units only. Projects above Rs 10 lakh (manufacturing) / Rs 5 lakh (service) need class 8 pass. No income ceiling.",
+    "cash_yearly": 0,
+    "benefit_note": "One-time margin-money subsidy of 15-35% of project cost (max project Rs 50 lakh manufacturing, Rs 20 lakh service/business)",
+    "documents": ["Aadhaar card", "Project report", "Caste certificate (if special category)", "Education certificate", "Rural area certificate (if rural)", "Bank account details"],
+    "apply": "kviconline.gov.in/pmegpeportal; EDP training is mandatory before subsidy release",
+    "source": "https://www.myscheme.gov.in/schemes/pmegp"
+  },
+  {
+    "id": "pms_sc",
+    "name": "Post-Matric Scholarship for SC Students",
+    "level": "Central",
+    "routes": [
+      {"label": "SC student in a post-matric course, family income up to Rs 2.5 lakh", "categories": ["sc"], "occupations": ["student"], "max_income": 250000}
+    ],
+    "also_check": "Must be enrolled in a recognised post-matric / post-secondary course. A raise of the income limit to Rs 4.5 lakh has been proposed; check the National Scholarship Portal for the current limit.",
+    "cash_yearly": 0,
+    "benefit_note": "Full compulsory non-refundable fees reimbursed plus a yearly academic allowance (amount depends on the course group)",
+    "documents": ["Caste certificate", "Income certificate of parents", "Previous marksheets", "Admission / fee receipt", "Aadhaar-linked bank account"],
+    "apply": "National Scholarship Portal (scholarships.gov.in) or the state portal (MahaDBT in Maharashtra)",
+    "source": "https://scholarships.gov.in"
+  },
+  {
+    "id": "ssy",
+    "name": "Sukanya Samriddhi Yojana (SSY)",
+    "level": "Central",
+    "routes": [
+      {"label": "parent/guardian of a girl child under 10", "requires": ["daughter_under_10"]}
+    ],
+    "also_check": "Maximum 2 accounts per family (3 for twins/triplets). Account in the girl's name.",
+    "cash_yearly": 0,
+    "benefit_note": "Savings account for a girl child at 8.2% interest (Oct-Dec 2026), deposits Rs 250 to Rs 1.5 lakh a year, tax-free under Section 80C",
+    "documents": ["Girl child's birth certificate", "Parent's Aadhaar and PAN", "Address proof", "Photos"],
+    "apply": "Any post office or authorised bank (SBI, BoB, PNB, etc.)",
+    "source": "https://www.indiapost.gov.in"
+  },
+  {
+    "id": "ladki_bahin",
+    "name": "Mukhyamantri Majhi Ladki Bahin Yojana (Maharashtra)",
+    "level": "Maharashtra",
+    "routes": [
+      {"label": "Maharashtra woman aged 21-65, family income up to Rs 2.5 lakh", "genders": ["female"], "min_age": 21, "max_age": 65, "max_income": 250000, "states": ["maharashtra"]}
+    ],
+    "also_check": "No family member may be an income-tax payer or a government employee. Aadhaar-linked bank account in her name.",
+    "cash_yearly": 18000,
+    "benefit_note": "Rs 1,500 per month (Rs 18,000 a year) by DBT",
+    "documents": ["Aadhaar card", "Maharashtra domicile certificate (or ration card / birth certificate)", "Income certificate (or yellow/orange ration card)", "Aadhaar-linked bank passbook", "Photo"],
+    "apply": "ladakibahin.maharashtra.gov.in or Anganwadi / ward office",
+    "source": "https://www.myscheme.gov.in/schemes/mmlby"
+  },
+  {
+    "id": "pmay_g",
+    "name": "Pradhan Mantri Awas Yojana - Gramin (PMAY-G)",
+    "level": "Central",
+    "routes": [
+      {"label": "rural family without a pucca house", "areas": ["rural"], "requires": ["no_pucca_house"]}
+    ],
+    "also_check": "Family must be on the SECC-2011 / Awaas+ list verified by the Gram Sabha.",
+    "cash_yearly": 0,
+    "benefit_note": "One-time Rs 1.20 lakh (plain areas) or Rs 1.30 lakh (hilly/NE states) to build a pucca house, plus up to Rs 12,000 for a toilet",
+    "documents": ["Aadhaar card", "Bank account details", "MGNREGA job card", "Swachh Bharat Mission number"],
+    "apply": "Through the Gram Panchayat; status on pmayg.nic.in",
+    "source": "https://www.myscheme.gov.in/schemes/pmay-g"
+  }
+]
